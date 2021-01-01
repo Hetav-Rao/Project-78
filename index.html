@@ -1,0 +1,31 @@
+<html>
+      <head>
+            <title> Project 78 </title>
+      </head>
+      <body>
+            <center style="margin-top: 40px;">
+            <h1>My Family Book!</h1>
+            <img src="My family Book Cover.jpg" id="Every_img" style="width: 30%;">
+            <h3 id="family_member_name">Family Book!</h3>
+            <button onclick="nextslide()">Next</button>
+            </center>
+
+            <script>
+            var image = ["My family Book Cover.jpg", "Dad, Kamalesh.jpg", "Mom, Jayshri.jpg", "Little Brother, Mahir.jpg"];
+             var names = ["Family Book!","Dad, Kamalesh Rao", "Mom, Jayshri Rao", "Little Brother, Mahir Rao"];
+                  var i = 0;
+                  function nextslide() {
+                        i++;
+                        var family_member_in_Array = 3;
+                        if (i > family_member_in_Array)
+                        {
+                              i = 0;
+                        }
+                        var updated_img = image[i];
+                        var updated_name = names[i];
+                        document.getElementById("Every_img").src = updated_img;
+                        document.getElementById("family_member_name").innerHTML = updated_name;
+                  }
+            </script>
+      </body>
+</html>
